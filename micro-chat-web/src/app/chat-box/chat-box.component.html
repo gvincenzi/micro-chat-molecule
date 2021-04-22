@@ -1,0 +1,48 @@
+<section class="noselect container">
+    <div id="chat_modal" class="hidden-chat">
+        <div class="chat">
+            <div chatConfig class="chat-header" *ngIf="chatTitle">
+                <div class="chat-icon">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <p class="title" *ngIf="chatTitle" style="color: white!important;">{{ chatTitle }}</p>
+                <p class="sub-title" *ngIf="chatSubTitle">
+                    {{ chatSubTitle }}
+                </p>
+                <span (click)="closeDialog()" class="close-chat"
+                ><i class="fa fa-times"></i>
+        </span>
+            </div>
+            <div #autoScroll class="messages-content">
+                <div *ngFor="let message of messages">
+                    <label [ngClass]="message.author.nickname == participant.nickname ? 'user-msg' : 'bot-msg'">
+                        {{ message.author.nickname }} : {{ message.text }}</label>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="message-box">
+                <form *ngIf="this.chat != null" [formGroup]="messageForm" (ngSubmit)="onSubmit()" class="example-form">
+                    <input
+                            formControlName="text"
+                            type="text"
+                            class="message-input"
+                            placeholder="Type message..."
+                    />
+                    <div type="submit" class="noselect message-submit" (click)="onSubmit()">
+                        Send
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="float-buton-group noselect">
+        <div class="float-button" *ngIf="!isModalActive" (click)="showDialog()">
+            <mat-icon class="float-icon">send</mat-icon>
+        </div>
+        <div class="float-button" *ngIf="isModalActive" (click)="closeDialog()">
+            <mat-icon class="float-icon">close</mat-icon>
+        </div>
+    </div>
+</section>
