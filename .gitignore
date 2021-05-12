@@ -39,5 +39,4 @@ build/
 ### VS Code ###
 .vscode/
 
-### PRODUCTIONS PROFILES ###
-application-citizen-room**
+application-dev.yml

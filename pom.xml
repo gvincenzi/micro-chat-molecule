@@ -26,6 +26,9 @@
         <module>micro-chat-core-model</module>
         <module>micro-chat-core-event-broker</module>
         <module>micro-chat-core-api</module>
+        <module>micro-chat-notification-domain</module>
+        <module>micro-chat-notification-email</module>
+        <module>micro-chat-notification-api</module>
     </modules>
 
     <dependencyManagement>
