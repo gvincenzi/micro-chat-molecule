@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>org.microchat</groupId>
-    <artifactId>micro-chat-molecule</artifactId>
+    <artifactId>micro-chat-macromolecule</artifactId>
     <version>1.0.0-SNAPSHOT</version>
-    <name>micro-chat-molecule</name>
-    <description>Micro Chat Molecule</description>
+    <name>micro-chat-macromolecule</name>
+    <description>Micro Chat Macromolecule</description>
     <packaging>pom</packaging>
 
     <properties>
@@ -22,10 +22,10 @@
     </properties>
 
     <modules>
-        <module>micro-chat-domain</module>
-        <module>micro-chat-model</module>
-        <module>micro-chat-event-broker</module>
-        <module>micro-chat-api</module>
+        <module>micro-chat-core-domain</module>
+        <module>micro-chat-core-model</module>
+        <module>micro-chat-core-event-broker</module>
+        <module>micro-chat-core-api</module>
     </modules>
 
     <dependencyManagement>
