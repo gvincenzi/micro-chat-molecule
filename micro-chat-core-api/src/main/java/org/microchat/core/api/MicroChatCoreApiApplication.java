@@ -4,9 +4,11 @@ import org.microchat.core.event.broker.binding.MQBinding;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.stream.annotation.EnableBinding;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+@EnableEurekaClient
 @EnableBinding(MQBinding.class)
 @EntityScan("org.microchat.core.model.entity")
 @EnableJpaRepositories("org.microchat.core.model.repository")

@@ -9,7 +9,7 @@ import {ChatMessage} from './model/chat-message';
     providedIn: 'root'
 })
 export class MicrochatService {
-    private readonly URL = 'http://localhost:4200/api';
+    private readonly URL = 'http://localhost:4200/microchat/core/api';
 
     constructor(private http: HttpClient) {
     }

@@ -29,6 +29,8 @@
         <module>micro-chat-notification-domain</module>
         <module>micro-chat-notification-email</module>
         <module>micro-chat-notification-api</module>
+        <module>micro-chat-gateway</module>
+        <module>micro-chat-eureka</module>
     </modules>
 
     <dependencyManagement>
